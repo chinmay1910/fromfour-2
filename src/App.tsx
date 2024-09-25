@@ -9,16 +9,16 @@ import MachineA from "./MachineA";
 function App() {
   return (
     <Router>
-     
       <Routes>
-        {/* Render Overview and Assets without the Layout */}
-        <Route path="overview" element={<Overview />} />
-        <Route path="assets" element={<Assets />} />
-        <Route path="workorders" element={<Workorders />} />
-        <Route path="inventory" element={<Inventory />} />
-        <Route path="reports" element={<Reports />} />
-        <Route path="machine-A" element={<MachineA />} />
-        {/* Define more routes as needed */}
+      {/* Render Overview and Assets without the Layout */}
+      <Route path="overview" element={<Overview />} />
+      <Route path="assets" element={<Assets />} />
+      <Route path="workorders" element={<Workorders />} />
+      <Route path="inventory" element={<Inventory />} />
+      <Route path="reports" element={<Reports />} />
+      <Route path="machine-A" element={<MachineA />} />
+      {/* Redirect empty route to Overview */}
+      <Route path="*" element={<Overview />} />
       </Routes>
     </Router>
   );
